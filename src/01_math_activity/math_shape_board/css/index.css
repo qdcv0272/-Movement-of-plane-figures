@@ -1,0 +1,1791 @@
+/* ============================ common ============================ */
+.preload-image {
+  position: absolute;
+  left: 0;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.pe-none {
+  pointer-events: none !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex !important;
+  gap: 10px;
+}
+.invisible {
+  visibility: hidden;
+}
+
+div,
+span,
+button {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+button {
+  background-color: transparent;
+}
+.os-scrollbar-track {
+  background-color: #e0e0e0 !important;
+  /* right: 12px; */
+  border-radius: 20px !important;
+}
+.os-scrollbar-vertical {
+  padding: 0;
+  width: 5px;
+  right: 5px;
+}
+.os-scrollbar-handle {
+  background-color: #536aaf !important;
+  border-radius: 20px !important;
+}
+
+/* ============================ common ============================ */
+
+/* ============================ header ============================ */
+header {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 46px;
+  background-color: #0384bd;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* home-box */
+header .home-box {
+  width: 56px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #025a8c;
+}
+header .home-box .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: -3px;
+}
+header .home-box .home.dim {
+  pointer-events: none;
+}
+header .home-box .home::before {
+  content: "";
+  width: 22px;
+  height: 21px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .home-box .home.dim::before {
+  background-image: url(../images/intro_title_icon/home_0001.png);
+}
+header .home-box .home::before {
+  background-image: url(../images/intro_title_icon/home_0001.png);
+}
+
+header .home-reset {
+  position: absolute;
+  background-color: transparent;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 100%;
+  gap: 10px;
+  left: 50px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+header .home-reset::before {
+  content: "";
+  background-image: url(../images/intro_title_icon/arrow.png);
+  width: 5px;
+  height: 12px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* title-box */
+header .title-box {
+  display: flex;
+  font-family: scd5;
+  color: #fff;
+  font-size: 18px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  pointer-events: none;
+}
+
+header .title-box .title {
+  display: flex;
+  width: 220px;
+  height: 34px;
+  background-color: #016296;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+
+/* header .title-box .icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-image: url(../images/intro_title_icon/header.png);
+} */
+
+/* ============================ header ============================ */
+
+/* ============================ intro-cont ============================ */
+/* 상단바 */
+.intro-cont .btn-list {
+  position: absolute;
+  width: 550px;
+  height: 42px;
+  left: 390px;
+  top: 73px;
+  display: flex;
+  /* background-color: #e9f1f4; */
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  z-index: 1;
+}
+
+.intro-cont .btn-list > .btn {
+  width: 132px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a8ab1;
+  font-size: 18px;
+  font-family: scd5;
+  gap: 15px;
+  background-color: #d1ebf7;
+  border-radius: 10px;
+}
+.intro-cont .btn-list > .btn.active {
+  border-radius: 8px;
+  color: #000;
+  background-color: #ffe362;
+  box-shadow: 0px 0px 0px 2px rgba(255, 218, 98, 1);
+}
+
+.intro-cont .btn-list > .btn::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.intro-cont .btn-list > .btn.active::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 20px 5px 20px 5px;
+  top: 5px;
+}
+
+.intro-cont .btn-list > .shape-btn.btn.active::after {
+  left: 3px;
+}
+.intro-cont .btn-list > .k-icon-btn.btn.active::after {
+  left: 142px;
+}
+.intro-cont .btn-list > .number-btn.btn.active::after {
+  left: 282px;
+}
+.intro-cont .btn-list > .custom-btn.btn.active::after {
+  left: 421px;
+}
+
+.intro-cont .btn-list .shape-btn::before {
+  width: 47px;
+  height: 14px;
+  background-image: url(../images/intro_title_icon/icon_shape.png);
+}
+.intro-cont .btn-list .shape-btn.active::before {
+  background-image: url(../images/intro_title_icon/icon_shape_on.png);
+}
+
+.intro-cont .btn-list .k-icon-btn::before {
+  width: 47px;
+  height: 28px;
+  background-image: url(../images/intro_title_icon/icon_k.png);
+}
+.intro-cont .btn-list .k-icon-btn.active::before {
+  background-image: url(../images/intro_title_icon/icon_k_on.png);
+}
+
+.intro-cont .btn-list .number-btn::before {
+  width: 40px;
+  height: 28px;
+  background-image: url(../images/intro_title_icon/icon_num.png);
+}
+.intro-cont .btn-list .number-btn.active::before {
+  background-image: url(../images/intro_title_icon/icon_num_on.png);
+}
+
+.intro-cont .btn-list .custom-btn::before {
+  width: 28px;
+  height: 16px;
+  background-image: url(../images/intro_title_icon/icon_cus.png);
+}
+.intro-cont .btn-list .custom-btn.active::before {
+  background-image: url(../images/intro_title_icon/icon_cus_on.png);
+}
+
+.intro-cont .btn-list > .btn.active {
+  color: #000;
+}
+
+/* make-board */
+.intro-cont .make-board {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 모눈판 */
+.intro-cont .make-board .board {
+  position: absolute;
+  width: 1175px;
+  height: 457px;
+  left: 52.5px;
+  top: 151.05px;
+  /* background-color: rgba(0, 0, 125, 0.3); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  gap: 5px;
+}
+
+.intro-cont .make-board .board .item {
+  position: relative;
+  width: 192px;
+  height: 192px;
+  background-image: url(../images/intro_board/board.png);
+  overflow: hidden;
+  border-radius: 3px;
+}
+.intro-cont .make-board .board .item.active {
+  width: 192px;
+  height: 192px;
+  background-image: url(../images/intro_board/board_on.png);
+}
+/* .intro-cont .make-board .board .item.active {
+  box-shadow: 0px 0px 0px 4px #474460;
+  border-radius: 2px;
+} */
+.intro-cont .make-board .board .item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border: 4px solid #45a6fc;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-cont .make-board .board .item::before {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  overflow: hidden;
+}
+/* 도형 */
+.intro-cont .make-board.shape-play .board .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-cont .make-board.shape-play .board .item::before {
+  width: 116px;
+  height: 116px;
+}
+.intro-cont .make-board.shape-play .board .item-01::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_01.png);
+}
+.intro-cont .make-board.shape-play .board .item-02::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_02.png);
+}
+.intro-cont .make-board.shape-play .board .item-03::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_03.png);
+}
+.intro-cont .make-board.shape-play .board .item-04::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_04.png);
+}
+.intro-cont .make-board.shape-play .board .item-05::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_05.png);
+}
+.intro-cont .make-board.shape-play .board .item-06::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_06.png);
+}
+.intro-cont .make-board.shape-play .board .item-07::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_07.png);
+}
+.intro-cont .make-board.shape-play .board .item-08::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_08.png);
+}
+.intro-cont .make-board.shape-play .board .item-09::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_09.png);
+}
+.intro-cont .make-board.shape-play .board .item-10::before {
+  background-image: url(../images/intro_board/shape_icon/shape_icon_10.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-01::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_01.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-02::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_02.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-03::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_03.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-04::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_04.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-05::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_05.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-06::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_06.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-07::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_07.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-08 {
+  display: flex;
+  align-items: start;
+}
+
+.intro-cont .make-board.k-icon-play .board .item-08::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_08.png);
+  height: 154px;
+}
+.intro-cont .make-board.k-icon-play .board .item-09::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_09.png);
+}
+.intro-cont .make-board.k-icon-play .board .item-10::before {
+  background-image: url(../images/intro_board/k_icon/k_icon_10.png);
+}
+
+/* 숫자 */
+.intro-cont .make-board.number-play .board .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-cont .make-board.number-play .board .item::before {
+  height: 192px;
+}
+.intro-cont .make-board.number-play .board .item-01::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_01.png);
+}
+.intro-cont .make-board.number-play .board .item-02::before {
+  width: 40px;
+  background-image: url(../images/intro_board/num_icon/num_icon_02.png);
+}
+.intro-cont .make-board.number-play .board .item-03::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_03.png);
+}
+.intro-cont .make-board.number-play .board .item-04::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_04.png);
+}
+.intro-cont .make-board.number-play .board .item-05 {
+  justify-content: end !important;
+}
+.intro-cont .make-board.number-play .board .item-05::before {
+  width: 154px;
+  background-image: url(../images/intro_board/num_icon/num_icon_05.png);
+  /* left: 20px; */
+}
+.intro-cont .make-board.number-play .board .item-06::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_06.png);
+}
+.intro-cont .make-board.number-play .board .item-07::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_07.png);
+}
+.intro-cont .make-board.number-play .board .item-08::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_08.png);
+}
+.intro-cont .make-board.number-play .board .item-09::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_09.png);
+}
+.intro-cont .make-board.number-play .board .item-10::before {
+  width: 116px;
+  background-image: url(../images/intro_board/num_icon/num_icon_10.png);
+}
+
+/* 적용하기 */
+.intro-cont .btn-ok {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  left: 580px;
+  top: 665px;
+  background-color: #ff873c;
+  font-size: 17px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  padding-bottom: 0.1px;
+  font-family: scd5;
+}
+.intro-cont .btn-ok.dim {
+  background-color: #675bc6;
+  color: #fff;
+  pointer-events: none;
+}
+
+.intro-cont .btn-ok::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/intro_board/check_icon.png);
+  width: 15px;
+  height: 12px;
+}
+.intro-cont .btn-ok.dim::before {
+  background-image: url(../images/intro_board/check_icon_dim.png);
+}
+
+/* 만들기 custom-play */
+#svgCanvas {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 107px;
+  top: 184px;
+  overflow: hidden;
+}
+
+circle {
+  cursor: pointer;
+  z-index: 12;
+  fill: transparent;
+  /* opacity: 0.2; */
+}
+circle.active {
+  fill: #000;
+}
+rect {
+  z-index: 10;
+}
+line {
+  z-index: 11;
+  pointer-events: none !important;
+}
+polygon {
+  cursor: pointer;
+}
+
+/* 라인 , 색채우기, 사각형 그리기 */
+.custom-play .make-mode {
+  position: absolute;
+  display: flex;
+  width: 250px;
+  left: 750px;
+  top: 215px;
+  justify-content: space-between;
+}
+.custom-play .make-mode .btn {
+  width: 70px;
+  height: 70px;
+  background-color: #d1ebf7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-play .make-mode .btn::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 20px 5px 20px 5px;
+  top: 5px;
+}
+
+.custom-play .make-mode .line-mode.btn::after {
+  left: 5px;
+}
+.custom-play .make-mode .paint-mode.btn::after {
+  left: 95px;
+}
+.custom-play .make-mode .square-mode.btn::after {
+  left: 184px;
+}
+
+.custom-play .make-mode .line-mode::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/intro_board/custom_play/line_icon.png);
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.custom-play .make-mode .line-mode.active::before {
+  background-image: url(../images/intro_board/custom_play/line_icon_active.png);
+}
+.custom-play .make-mode .paint-mode::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/intro_board/custom_play/paint_icon.png);
+  width: 35px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.custom-play .make-mode .paint-mode.active::before {
+  background-image: url(../images/intro_board/custom_play/paint_icon_active.png);
+}
+
+.custom-play .make-mode .square-mode::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/intro_board/custom_play/rect_icon.png);
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.custom-play .make-mode .square-mode.active::before {
+  background-image: url(../images/intro_board/custom_play/rect_icon_active.png);
+}
+/* 색상 */
+.custom-play .paint-bucket {
+  position: absolute;
+  display: flex;
+  left: 585px;
+  top: 345px;
+  gap: 20px;
+  width: 586px;
+  height: 192px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.custom-play .paint-bucket .btn {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+}
+.custom-play .paint-bucket .btn.active::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background-image: url(../images/intro_board/custom_play/check_icon.png);
+  width: 29px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.custom-play .paint-bucket .btn.black {
+  background-color: #000;
+}
+.custom-play .paint-bucket .btn.red {
+  background-color: #f53a3a;
+}
+.custom-play .paint-bucket .btn.orange {
+  background-color: #ff760b;
+}
+.custom-play .paint-bucket .btn.yellow {
+  background-color: #ffc400;
+}
+.custom-play .paint-bucket .btn.lgreen {
+  background-color: #bcd011;
+}
+.custom-play .paint-bucket .btn.green {
+  background-color: #27aa2b;
+}
+.custom-play .paint-bucket .btn.sky {
+  background-color: #41a5ff;
+}
+.custom-play .paint-bucket .btn.blue {
+  background-color: #3568f3;
+}
+.custom-play .paint-bucket .btn.lpurple {
+  background-color: #9664e0;
+}
+.custom-play .paint-bucket .btn.purple {
+  background-color: #624093;
+}
+.custom-play .paint-bucket .btn.lbrown {
+  background-color: #b8793d;
+}
+.custom-play .paint-bucket .btn.brown {
+  background-color: #9f3e00;
+}
+
+/* 리셋 */
+.custom-play .reset-all {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: scd5;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 12px;
+  gap: 10px;
+  background-color: #13ad53;
+  left: 1146px;
+  top: 665px;
+  padding-bottom: 0.1px;
+}
+
+.custom-play .custom-board {
+  position: absolute;
+  width: 378px;
+  height: 378px;
+  left: 119px;
+  top: 194px;
+  background-image: url(../images/intro_board/custom_play/board.png);
+  pointer-events: none;
+}
+.custom-play .custom-board::before {
+  content: "";
+  width: 123px;
+  height: 109px;
+  position: absolute;
+  left: -46px;
+  top: -31px;
+  background-image: url(../images/intro_board/custom_play/cm.png);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+/* ============================ intro-cont ============================ */
+
+/* ============================ game-cont ============================ */
+/* 모눈 종이 */
+.game-cont .shape-container {
+  position: absolute;
+  width: 602px;
+  height: 572px;
+  left: 39px;
+  top: 79px;
+
+  background-image: url(../images/game_board/board.png);
+}
+.game-cont .shape-container::before {
+  content: "";
+  background-image: url(../images/game_board/board_cm.png);
+  position: absolute;
+  width: 65px;
+  height: 54px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  left: -35px;
+  top: -22px;
+}
+/* 선택된 도형 */
+.game-cont .shape-container .shape-box {
+  position: relative;
+  left: 240px;
+  top: 211px;
+  /* background-color: #329749; */
+  /* opacity: 0.5; */
+  width: 151px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+.game-cont .shape-container .shape-box .originalShape {
+  position: relative;
+  /* width: 150px;
+  height: 150px; */
+  /* left: 211px; */
+  /* top: 211px; */
+  /* background-color: rgba(215, 20, 99, 0.1); */
+}
+
+/* .game-cont .shape-container .shape-box .originalShape.custom.ani-play polygon {
+  fill: #899397 !important;
+}
+.game-cont .shape-container .shape-box .originalShape.custom.ani-play line {
+  stroke: #52585a !important;
+} */
+
+.originalShape {
+  opacity: 1;
+}
+.copyShape {
+  /* opacity: 0.7 !important; */
+  will-change: transform;
+}
+
+#animatedClone {
+  opacity: 1 !important;
+}
+
+/* option-pop-left 열고 닫기 버튼 */
+.game-cont .open-pop-btn {
+  position: absolute;
+  width: 25px;
+  height: 48px;
+  left: 660px;
+  top: calc(50% - 214px);
+  background-color: #ec5d93;
+  border-top-left-radius: 12.5px;
+  border-bottom-left-radius: 12.5px;
+  z-index: 1;
+}
+.game-cont .open-pop-btn.dim {
+  background-color: #675bc6;
+  pointer-events: none;
+}
+.game-cont .open-pop-btn.active::before {
+  transform: scale(1);
+}
+.game-cont .open-pop-btn::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 18px;
+  left: 9px;
+  top: calc(50% - 8px);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/game_board/board_control/arrow.png);
+  transform: scale(-1);
+}
+
+/* 이동 방법 팝업 */
+.game-cont .option-pop-left {
+  position: absolute;
+  width: 310px;
+  height: 580px;
+  left: 685px;
+  top: 75px;
+  /* border: 2px solid #c8d7dd; */
+  /* border-top-left-radius: 20px; */
+  /* border-bottom-left-radius: 20px; */
+  border-radius: 20px;
+  background-color: #deeefa;
+  display: none;
+}
+.game-cont .option-pop-left.on {
+  display: block;
+}
+
+/* 이동 방법 */
+.game-cont .option-pop-left .box-title {
+  width: 100%;
+  height: 50px;
+  font-family: scd5;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13628c;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* 밀기, 뒤집기, 돌리기 */
+.game-cont .option-pop-left .option-box {
+  position: relative;
+  width: 280px;
+  height: 56px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 12px;
+  top: 17px;
+  left: 15px;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-cont .option-pop-left .option-box .option {
+  color: #333;
+  position: relative;
+  width: 84px;
+  height: 34px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: scd5;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+.game-cont .option-pop-left .option-box .option-push.active {
+  color: #000;
+  background-color: #ffda5f;
+}
+.game-cont .option-pop-left .option-box .option-flip.active {
+  color: #000;
+  background-color: #ade268;
+}
+.game-cont .option-pop-left .option-box .option-swing.active {
+  color: #000;
+  background-color: #ffbbd0;
+}
+
+.game-cont .option-pop-left .option-control {
+  background-color: #fff;
+  border-radius: 16.25px;
+  width: 280px;
+  height: 365px;
+  position: relative;
+  left: 15px;
+  top: 35px;
+}
+
+/* 밀기 옵션 */
+.game-cont .option-pop-left .option-control .control-push .arrow-box {
+  position: relative;
+  /* width: 238px; */
+  /* height: 209px; */
+  /* background-color: rgba(100, 100, 100, 0.3); */
+  left: 28px;
+  top: 12px;
+}
+
+.game-cont .option-pop-left .option-control .control-push .line-box {
+  position: absolute;
+  display: inline-block;
+  left: 29px;
+  top: 218px;
+  width: 222px;
+  height: 2px;
+  background-color: #e1eaf5;
+  border-radius: 3px;
+}
+
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/game_board/board_control/control_arrow_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow::before {
+  position: absolute;
+  font-family: scd5;
+  font-size: 15px;
+  color: #4b5a60;
+  pointer-events: none;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-up {
+  transform: rotate(90deg);
+  left: 83px;
+  top: 27px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-up {
+  transform: rotate(90deg);
+  left: 83px;
+  top: 27px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-up::before {
+  content: "위쪽";
+  left: -25px;
+  top: 21px;
+  transform: rotate(-90deg);
+}
+
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-right {
+  transform: rotate(180deg);
+  left: 148px;
+  top: 67px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-right::before {
+  content: "오른쪽";
+  left: -45px;
+  top: 25px;
+  height: 10px;
+  /* width: inherit; */
+  transform: rotate(-270deg);
+  writing-mode: sideways-rl;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-bottom {
+  transform: rotate(270deg);
+  left: 83px;
+  top: 97px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-bottom::before {
+  content: "아래쪽";
+  left: -35px;
+  top: 20px;
+  transform: rotate(-270deg);
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-left {
+  left: 17px;
+  top: 66px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow-left::before {
+  content: "왼쪽";
+  left: -23px;
+  top: 8px;
+  width: 10px;
+}
+.game-cont .option-pop-left .option-control .control-push .arrow-box .arrow.active {
+  background-image: url(../images/game_board/board_control/control_arrow_0002.png);
+}
+
+.game-cont .option-pop-left .option-control .control-push .centimeter-box {
+  position: relative;
+  width: 260px;
+  height: 93px;
+  left: 10px;
+  top: 246px;
+  display: flex;
+  gap: 15px 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(100, 100, 100, 0.3);*/
+}
+
+.game-cont .option-pop-left .option-control .control-push .centimeter-box .cm {
+  width: 70px;
+  height: 36px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #d1ebf7;
+  color: #474460;
+}
+.game-cont .option-pop-left .option-control .control-push .centimeter-box .cm.active {
+  background-color: #ffda5f;
+  color: #000;
+}
+/* 밀기 옵션 */
+
+/* 뒤집기 옵션 */
+.game-cont .option-pop-left .option-control .control-flip .flip-box {
+  position: relative;
+  display: flex;
+  width: 178px;
+  height: 210px;
+  /* background-color: rgba(100, 100, 100, 0.3); */
+  left: 53px;
+  top: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/game_board/board_control/control_flip0001.png);
+}
+
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip::before {
+  position: absolute;
+  font-family: scd5;
+  font-size: 15px;
+  color: #4b5a60;
+  pointer-events: none;
+}
+
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-left {
+  transform: scale(-1);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-left.active {
+  background-image: url(../images/game_board/board_control/control_flip0002.png);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-left::before {
+  content: "왼쪽";
+  left: 23px;
+  top: -29px;
+  transform: scale(-1);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-right.active {
+  background-image: url(../images/game_board/board_control/control_flip0002.png);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-right::before {
+  content: "오른쪽";
+  left: 13px;
+  top: 78px;
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-up {
+  transform: rotate(-90deg);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-up.active {
+  background-image: url(../images/game_board/board_control/control_flip0002.png);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-up::before {
+  content: "위쪽";
+  left: -32px;
+  top: 24px;
+  transform: rotate(90deg);
+}
+
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-bottom {
+  transform: rotate(90deg);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-bottom.active {
+  background-image: url(../images/game_board/board_control/control_flip0002.png);
+}
+.game-cont .option-pop-left .option-control .control-flip .flip-box .flip-bottom::before {
+  content: "아래쪽";
+  left: 58px;
+  top: 25px;
+  width: 60px;
+  transform: rotate(-90deg);
+}
+/* 뒤집기 옵션 */
+
+/* 돌리기 옵션 */
+.game-cont .option-pop-left .option-control.option-swing {
+  background-color: transparent;
+}
+
+.game-cont .option-pop-left .option-control.option-swing .box {
+  position: absolute;
+  width: 280px;
+  height: 170px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.game-cont .option-pop-left .option-control.option-swing .box.box-02 {
+  top: 200px;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .title-box {
+  position: absolute;
+  width: 242px;
+  height: 26px;
+  display: flex;
+  color: #334045;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.game-cont .option-pop-left .option-control .control-swing .title-box.r {
+  left: 19px;
+  top: 20px;
+}
+.game-cont .option-pop-left .option-control .control-swing .title-box.l {
+  left: 37px;
+  top: 19px;
+}
+.game-cont .option-pop-left .option-control .control-swing .title-box .title {
+  font-size: 18px;
+  padding: 0px 10px;
+  position: absolute;
+  top: -10px;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .box-02 .title-box .title {
+  font-size: 18px;
+  padding: 0px 35px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .box-02 .title-box .title::before {
+  content: "";
+  width: 219px;
+  height: 36px;
+  background-image: url(../images/game_board/board_control/custom_bg.png);
+  position: absolute;
+  left: -18px;
+  top: -10px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .title-box .title::before {
+  content: "";
+  width: 219px;
+  height: 36px;
+  background-image: url(../images/game_board/board_control/custom_bg.png);
+  position: absolute;
+  left: -64px;
+  top: -10px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .swing-box {
+  position: absolute;
+  width: 242px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box.type-r {
+  top: 70px;
+  left: 18px;
+  z-index: 1;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box.type-l {
+  top: 66px;
+  left: 18px;
+  z-index: 1;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing::before {
+  position: absolute;
+  font-family: scd5;
+  font-size: 15px;
+  color: #4b5a60;
+  pointer-events: none;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-90 {
+  background-image: url(../images/game_board/board_control/control_swing_r_01_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-90.active {
+  background-image: url(../images/game_board/board_control/control_swing_r_01_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-180 {
+  background-image: url(../images/game_board/board_control/control_swing_r_02_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-180.active {
+  background-image: url(../images/game_board/board_control/control_swing_r_02_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-270 {
+  background-image: url(../images/game_board/board_control/control_swing_r_03_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-270.active {
+  background-image: url(../images/game_board/board_control/control_swing_r_03_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-360 {
+  background-image: url(../images/game_board/board_control/control_swing_r_04_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-360.active {
+  background-image: url(../images/game_board/board_control/control_swing_r_04_0002.png);
+}
+
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-90 {
+  background-image: url(../images/game_board/board_control/control_swing_l_01_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-90.active {
+  background-image: url(../images/game_board/board_control/control_swing_l_01_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-180 {
+  background-image: url(../images/game_board/board_control/control_swing_l_02_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-180.active {
+  background-image: url(../images/game_board/board_control/control_swing_l_02_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-270 {
+  background-image: url(../images/game_board/board_control/control_swing_l_03_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-270.active {
+  background-image: url(../images/game_board/board_control/control_swing_l_03_0002.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-360 {
+  background-image: url(../images/game_board/board_control/control_swing_l_04_0001.png);
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-360.active {
+  background-image: url(../images/game_board/board_control/control_swing_l_04_0002.png);
+}
+
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-90::before {
+  content: "90°";
+  left: 14px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-180::before {
+  content: "180°";
+  left: 11px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-270::before {
+  content: "270°";
+  left: 11px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-r-360::before {
+  content: "360°";
+  left: 11px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-90::before {
+  content: "90°";
+  left: 14px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-180::before {
+  content: "180°";
+  left: 11px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-270::before {
+  content: "270°";
+  left: 11px;
+  top: 59px;
+}
+.game-cont .option-pop-left .option-control .control-swing .swing-box .swing-l-360::before {
+  content: "360°";
+  left: 11px;
+  top: 59px;
+}
+/* 돌리기 옵션 */
+
+/* 추가하기 */
+.game-cont .option-pop-left .add-btn {
+  background-color: #ff873c;
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  left: 96px;
+  top: 525px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  gap: 8px;
+  color: #fff;
+  padding-bottom: 0.1px;
+}
+.game-cont .option-pop-left .add-btn::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.game-cont .option-pop-left .add-btn.dim::before {
+  background-image: url(../images/game_icon/plus_0001.png);
+}
+.game-cont .option-pop-left .add-btn::before {
+  background-image: url(../images/game_icon/plus_0002.png);
+}
+
+.game-cont .option-pop-left .add-btn.dim {
+  background-color: #675bc6;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* 이동 순서 */
+.game-cont .option-pop-right {
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  left: 1000px;
+  top: 0px;
+  background-color: #deeefa;
+  /* border-left: 3px solid #c8d7dd; */
+}
+
+.game-cont .option-pop-right .title-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-family: scd5;
+  font-size: 20px;
+  color: #fff;
+  background-color: #13628c;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 46px;
+  text-indent: 40px;
+}
+
+/* 이동순서 스크롤 */
+.game-cont .scroll-cont {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 257px;
+  height: 530px;
+  padding: 3px 3px 10px 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.game-cont .action-list {
+  position: relative;
+  left: 23px;
+  margin-bottom: 5px;
+}
+
+/* 이동 순서 박스 */
+.game-cont .action {
+  width: 180px;
+  min-height: 126px;
+  background-color: #fff;
+  /* border-radius: 15px 5px 15px 15px; */
+  border-radius: 15px;
+  box-shadow: 0px 0px 4px 0px rgba(120, 149, 160, 1);
+}
+.game-cont .action:not(:last-child) {
+  margin-bottom: 20px;
+}
+/* .game-cont .action.act-select {
+  box-shadow: 0px 0px 0px 3px rgba(71, 68, 96, 1);
+} */
+
+.game-cont .action.act-select::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 15px 5px 15px 15px; */
+  border-radius: 15px;
+  border: 3px solid #474460;
+}
+
+.game-cont .action.dim .sub-change-box,
+.game-cont .action.dim .sub-mode-box {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.game-cont .action .sub-act-box {
+  display: flex;
+  /* background-color: #e9e9e9; */
+  height: 30px;
+  border-radius: 15px 5px 0px 0px;
+  justify-content: end;
+  gap: 3px;
+  margin-right: 11px;
+  position: relative;
+  top: 5px;
+}
+.game-cont .action .sub-act-box .del {
+  width: 30px;
+  background-image: url(../images/game_icon/onoff_0001.png);
+}
+.game-cont .action.dim .sub-act-box .del {
+  width: 30px;
+  background-image: url(../images/game_icon/onoff_0001.png);
+}
+.game-cont .scroll-cont.pe-none .action .sub-act-box .del {
+  width: 30px;
+  background-image: url(../images/game_icon/onoff_0001.png) !important;
+}
+
+.game-cont .action .sub-act-box .on-off {
+  width: 30px;
+  background-image: url(../images/game_icon/dim_0001.png);
+}
+.game-cont .action .sub-act-box .on-off.active {
+  background-image: url(../images/game_icon/dim_0002.png);
+}
+.game-cont .scroll-cont.pe-none .action .sub-act-box .on-off.active {
+  background-image: url(../images/game_icon/dim_0001.png) !important;
+}
+.game-cont .scroll-cont.pe-none .action .sub-act-box .on-off {
+  background-image: url(../images/game_icon/dim_0001.png) !important;
+}
+
+.game-cont .scroll-cont.pe-none .action.dim .sub-act-box .on-off {
+  background-image: url(../images/game_icon/dim_0002.png) !important;
+}
+
+.game-cont .action.dim {
+  background-color: #9ba8b9;
+}
+
+.game-cont .action .sub-mode-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.game-cont .action .sub-mode-box .item {
+  width: 160px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-indent: 10px;
+  font-family: scd5;
+  font-size: 16px;
+}
+.game-cont .action .sub-mode-box .item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.game-cont .action.mode-push .sub-mode-box .item {
+  background-color: #ffeaa6;
+}
+.game-cont .action.mode-flip .sub-mode-box .item {
+  background-color: #dff3a9;
+}
+.game-cont .action.mode-swing .sub-mode-box .item {
+  background-color: #ffdde8;
+}
+
+.game-cont .action .sub-change-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 이동 순서 변경 화살표 */
+.game-cont .action .sub-change-box .btn {
+  width: 26px;
+  height: 26px;
+}
+.game-cont .action .sub-change-box .arr-up {
+  background-image: url(../images/game_icon/arrow_0002.png);
+}
+.game-cont .action .sub-change-box .arr-down {
+  background-image: url(../images/game_icon/arrow_0002.png);
+  transform: scale(-1);
+}
+.game-cont .action .sub-change-box .arr-up.dim {
+  background-image: url(../images/game_icon/arrow_0001.png);
+  pointer-events: none;
+}
+.game-cont .action .sub-change-box .arr-down.dim {
+  background-image: url(../images/game_icon/arrow_0001.png);
+  pointer-events: none;
+}
+
+/* 이동순서 넘버 */
+.game-cont .action .number {
+  position: absolute;
+  left: 9px;
+  top: 5.5px;
+  font-family: scd5;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 27px;
+  background-color: #474460;
+  border-radius: 20px 20px 0px 20px;
+  transform: scale(0.9);
+}
+.game-cont .action.mode-push .number {
+  background-color: #ffbd1c;
+}
+.game-cont .action.mode-flip .number {
+  background-color: #259f9b;
+}
+.game-cont .action.mode-swing .number {
+  background-color: #ee6d89;
+}
+
+.game-cont .action.mode-push.dim .number {
+  background-color: #9b8030;
+}
+.game-cont .action.mode-flip.dim .number {
+  background-color: #186e7d;
+}
+.game-cont .action.mode-swing.dim .number {
+  background-color: #915072;
+}
+
+/* 이동 순서 변경 화살표 on/off */
+.game-cont .on-off-btn {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  left: 185px;
+  top: 56px;
+  z-index: 1;
+  background-image: url(../images/game_icon/on-off_0001.png);
+}
+.game-cont .on-off-btn.active {
+  background-image: url(../images/game_icon/on-off_0002.png);
+}
+
+/* 하단 버튼 */
+.game-cont .option-pop-right .button-list {
+  width: 250px;
+  height: 40px;
+  position: absolute;
+  left: 13px;
+  top: 665px;
+  /* background-color: rgba(215, 20, 99, 0.1); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-cont .option-pop-right .button-list .btn {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: scd5;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 12px;
+  gap: 10px;
+  padding-bottom: 0.1px;
+}
+.game-cont .option-pop-right .button-list .btn.play {
+  background-color: #ff873c;
+}
+.game-cont .option-pop-right .button-list .btn.play.dim {
+  background-color: #675bc6;
+  color: #fff;
+  pointer-events: none;
+}
+.game-cont .option-pop-right .button-list .btn.play.dim::before {
+  background-image: url(../images/game_icon/play_dim.png);
+}
+.game-cont .option-pop-right .button-list .btn.reset.dim::before {
+  background-image: url(../images/game_icon/reset_dim.png);
+}
+
+.game-cont .option-pop-right .button-list .btn.play.active {
+  background-color: #5e697c;
+}
+.game-cont .option-pop-right .button-list .btn.play.active::before {
+  background-image: url(../images/game_icon/stop.png);
+  width: 14px;
+  height: 14px;
+}
+.game-cont .option-pop-right .button-list .btn.play::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background-image: url(../images/game_icon/play.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.game-cont .option-pop-right .button-list .btn.reset::before,
+.custom-play .reset-all::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/game_icon/reset.png);
+  width: 14px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.game-cont .option-pop-right .button-list .btn.reset {
+  background-color: #13ad53;
+}
+.game-cont .option-pop-right .button-list .btn.reset.dim {
+  background-color: #675bc6;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* 도형 선택하기 */
+.game-cont .shape-home {
+  background-color: #13ad53;
+  width: 156px;
+  height: 40px;
+  left: 15px;
+  top: 665px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  font-family: scd5;
+  font-size: 17px;
+  color: #fff;
+  padding-bottom: 0.1px;
+}
+.game-cont .shape-home::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/intro_title_icon/arrow.png);
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 경고 팝업 */
+.game-cont .warn-pop {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-cont .warn-pop .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #6a6a6a;
+  opacity: 0.8;
+}
+
+.game-cont .warn-pop .warn-box {
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  left: 390px;
+  top: 230px;
+  background-color: #deeefa;
+  opacity: 1;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+}
+
+.game-cont .warn-pop .warn-box .warn-text-box {
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 450px;
+  height: 160px;
+  font-family: scd5;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.game-cont .warn-pop .warn-box .warn-text-box .em {
+  color: #e72716;
+}
+
+.game-cont .warn-pop .warn-box .colse-btn {
+  background-color: transparent;
+  height: 34px;
+  width: 120px;
+  color: #fff;
+  font-family: scd5;
+  font-size: 16px;
+  background-color: #ff873c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.game-cont .warn-pop .warn-box .colse-btn::before {
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/intro_board/check_icon.png);
+  width: 15px;
+  height: 12px;
+}
+
+/* ============================ game-cont ============================ */
+
+.shape,
+.copyShape,
+.firstCopyShape,
+.originalShape {
+  will-change: transform, opacity;
+}
+
+.ani-play {
+  will-change: transform, opacity;
+}
+
+.option-pop-left,
+.shape-container,
+.open-pop-btn {
+  will-change: transform, left, opacity;
+}
+
+/* .action-list,
+.action {
+  will-change: transform;
+} */
+
+.js-scroll-cont {
+  will-change: scroll-position;
+}
+
+/* .action .number,
+.action .mode,
+.action .move,
+.action .length {
+  will-change: transform;
+} */
+

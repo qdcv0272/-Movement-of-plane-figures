@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, interactive-widget=overlays-content" />
+    <title>평면도형</title>
+  <link href="css/index.css" rel="stylesheet"></head>
+
+  <body>
+    <div id="wrap" class="root">
+      <header>
+        <div class="home-box">
+          <button class="home"></button>
+        </div>
+        <div class="title-box">
+          <span class="title">평면도형의 이동</span>
+        </div>
+      </header>
+
+      <div class="scene intro-cont d-none">
+        <div class="btn-list">
+          <button class="shape-btn btn active">도형</button>
+          <button class="k-icon-btn btn">문자</button>
+          <button class="number-btn btn">숫자</button>
+          <button class="custom-btn btn">만들기</button>
+        </div>
+
+        <div class="make-board-list">
+          <div class="shape-play make-board">
+            <div class="board">
+              <button class="shape-item item item-01"></button>
+              <button class="shape-item item item-02"></button>
+              <button class="shape-item item item-03"></button>
+              <button class="shape-item item item-04"></button>
+              <button class="shape-item item item-05"></button>
+              <button class="shape-item item item-06"></button>
+              <button class="shape-item item item-07"></button>
+              <button class="shape-item item item-08"></button>
+              <button class="shape-item item item-09"></button>
+              <button class="shape-item item item-10"></button>
+            </div>
+          </div>
+          <div class="k-icon-play make-board d-none">
+            <div class="board">
+              <button class="k-icon-item item item-01"></button>
+              <button class="k-icon-item item item-02"></button>
+              <button class="k-icon-item item item-03"></button>
+              <button class="k-icon-item item item-04"></button>
+              <button class="k-icon-item item item-05"></button>
+              <button class="k-icon-item item item-06"></button>
+              <button class="k-icon-item item item-07"></button>
+              <button class="k-icon-item item item-08"></button>
+              <button class="k-icon-item item item-09"></button>
+              <button class="k-icon-item item item-10"></button>
+            </div>
+          </div>
+          <div class="number-play make-board d-none">
+            <div class="board">
+              <button class="number-item item item-01"></button>
+              <button class="number-item item item-02"></button>
+              <button class="number-item item item-03"></button>
+              <button class="number-item item item-04"></button>
+              <button class="number-item item item-05"></button>
+              <button class="number-item item item-06"></button>
+              <button class="number-item item item-07"></button>
+              <button class="number-item item item-08"></button>
+              <button class="number-item item item-09"></button>
+              <button class="number-item item item-10"></button>
+            </div>
+          </div>
+          <div class="custom-play make-board d-none">
+            <div class="custom-board"></div>
+            <svg id="svgCanvas" width="400" height="400"></svg>
+
+            <div class="make-mode">
+              <button class="btn line-mode active"></button>
+              <button class="btn paint-mode"></button>
+              <button class="btn square-mode"></button>
+            </div>
+
+            <div class="paint-bucket">
+              <button class="color btn black color-black active"></button>
+              <button class="color btn red color-red"></button>
+              <button class="color btn orange color-orange"></button>
+              <button class="color btn yellow color-yellow"></button>
+              <button class="color btn lgreen color-lgreen"></button>
+              <button class="color btn green color-green"></button>
+              <button class="color btn sky color-sky"></button>
+              <button class="color btn blue color-blue"></button>
+              <button class="color btn lpurple color-lpurple"></button>
+              <button class="color btn purple color-purple"></button>
+              <button class="color btn lbrown color-lbrown"></button>
+              <button class="color btn brown color-brown"></button>
+            </div>
+
+            <button class="reset-all dim">다시하기</button>
+          </div>
+        </div>
+
+        <button class="btn-ok dim">적용하기</button>
+      </div>
+      <div class="scene game-cont d-none">
+        <div class="warn-pop d-none">
+          <div class="bg"></div>
+          <div class="warn-box">
+            <div class="warn-text-box">
+              <div>평면도형이 더 이상 이동할 수 없습니다. 이동 방법을 <span class="em">삭제</span>하거나 <span class="em">수정</span>해 주세요.</div>
+            </div>
+            <button class="colse-btn">확 인</button>
+          </div>
+        </div>
+        <div class="warn-pop warn-pop-count d-none">
+          <div class="bg"></div>
+          <div class="warn-box">
+            <div class="warn-text-box">
+              <div>이동은 <span class="em">9번</span>까지 가능합니다. <br />더 이상 추가할 수 없습니다.</div>
+            </div>
+            <button class="colse-btn">확 인</button>
+          </div>
+        </div>
+
+        <div class="shape-container">
+          <div class="shape-box">
+            <div class="shape originalShape"></div>
+          </div>
+        </div>
+
+        <button class="open-pop-btn active"></button>
+
+        <div class="option-pop-left on">
+          <div class="box-title">이동 방법</div>
+
+          <div class="option-box">
+            <button class="option option-push active">밀기</button>
+            <button class="option option-flip">뒤집기</button>
+            <button class="option option-swing">돌리기</button>
+          </div>
+
+          <div class="option-control">
+            <div class="control control-push">
+              <div class="arrow-box">
+                <button class="arrow arrow-up"></button>
+                <button class="arrow arrow-right"></button>
+                <button class="arrow arrow-bottom"></button>
+                <button class="arrow arrow-left"></button>
+              </div>
+
+              <div class="line-box"></div>
+
+              <div class="centimeter-box">
+                <button class="cm cm-1 scd5">1 cm</button>
+                <button class="cm cm-2 scd5">2 cm</button>
+                <button class="cm cm-3 scd5">3 cm</button>
+                <button class="cm cm-4 scd5">4 cm</button>
+                <button class="cm cm-5 scd5">5 cm</button>
+              </div>
+            </div>
+
+            <div class="control control-flip d-none">
+              <div class="flip-box">
+                <button class="flip flip-left"></button>
+                <button class="flip flip-right"></button>
+                <button class="flip flip-up"></button>
+                <button class="flip flip-bottom"></button>
+              </div>
+            </div>
+
+            <div class="control control-swing d-none">
+              <div class="box box-01">
+                <div class="title-box scd5 r"><div class="title">시계방향</div></div>
+                <div class="swing-box type-r">
+                  <button class="swing swing-r swing-r-90"></button>
+                  <button class="swing swing-r swing-r-180"></button>
+                  <button class="swing swing-r swing-r-270"></button>
+                  <button class="swing swing-r swing-r-360"></button>
+                </div>
+              </div>
+
+              <div class="box box-02">
+                <div class="title-box scd5 l"><div class="title">시계 반대 방향</div></div>
+                <div class="swing-box type-l">
+                  <button class="swing swing-l swing-l-90"></button>
+                  <button class="swing swing-l swing-l-180"></button>
+                  <button class="swing swing-l swing-l-270"></button>
+                  <button class="swing swing-l swing-l-360"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="add-btn dim"><span class="scd5 pe-none">추가하기</span></button>
+        </div>
+
+        <div class="option-pop-right">
+          <div class="title-box">이동 순서</div>
+          <button class="on-off-btn pe-none"></button>
+          <div class="scroll-cont js-scroll-cont">
+            <div class="action-list"></div>
+          </div>
+
+          <div class="button-list">
+            <button class="btn play dim">움직이기</button>
+            <button class="btn reset dim">다시하기</button>
+          </div>
+        </div>
+
+        <button class="shape-home">도형 선택하기</button>
+      </div>
+
+      <!-- <div class="scene outro-cont d-none">
+        <button class="btn-ok">다음</button>
+      </div> -->
+    </div>
+  <script defer src="js/vendor.js"></script><script defer src="js/index.js"></script></body>
+</html>
+

@@ -1,0 +1,55 @@
+// vscode 확장 플러그인 : Prettier(필수), Eslint(선택), StyleLint(선택)
+{
+  "editor.tabSize": 2,
+  // ----------------------- stylelint setting
+  "stylelint.enable": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // ----------------------- Formatter setting
+  "html.format.wrapLineLength": 160,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.indentInnerHtml": false,
+  "html.format.wrapAttributes": "preserve",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.associations": {
+    "*.ps1": "powershell"
+  },
+
+  // 파일 탐색기에서 제외할 설정들
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/coverage": true,
+    "**/.nyc_output": true,
+    "**/build": true,
+    "**/out": true,
+    "**/*.log": true
+  },
+
+  // Quick Open (Ctrl+P)에서 제외할 설정들
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.git/**": true,
+    "**/coverage/**": true,
+    "**/.nyc_output/**": true,
+    "**/build/**": true,
+    "**/out/**": true
+  }
+}
+

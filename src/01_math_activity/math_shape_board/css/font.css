@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "sB";
+  src: url("../font/SUIT-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "sEB";
+  src: url("../font/SUIT-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "pB";
+  src: url("../font/Pretendard-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "sR";
+  src: url("../font/Cafe24Ssurround-v2.0.otf") format("opentype");
+}
+@font-face {
+  font-family: "scd5";
+  src: url("../font/SCDream5.otf") format("opentype");
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  font-family: sB, sEB, pB, sR, scd5;
+  visibility: hidden;
+}
+
+.sB {
+  font-family: sB !important;
+}
+.sEB {
+  font-family: sEB !important;
+}
+.pB {
+  font-family: pB !important;
+}
+.sR {
+  font-family: sR !important;
+}
+.scd5 {
+  font-family: scd5 !important;
+}

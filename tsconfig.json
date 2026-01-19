@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "downlevelIteration": true,
+    "lib": ["dom", "es6"],
+
+    "allowJs": false,
+
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "baseUrl": "./",
+    "paths": {
+      "@common/*": ["src/common/*"],
+      "@assets/*": ["src/common/assets/*"],
+      "@ts/*": ["src/common/ts/*"],
+      "@module/*": ["src/common/ts/module/*"],
+      "@css/*": ["src/common/css/*"],
+      "@font/*": ["src/common/font/*"]
+    },
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "strictPropertyInitialization": false,
+
+    "isolatedModules": true,
+
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["dist"]
+}

@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "165dsa1f55asd0006.png",
+	"frame": {"x":4,"y":4,"w":220,"h":146},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":146},
+	"sourceSize": {"w":220,"h":146}
+},
+{
+	"filename": "165dsa1f55asd0013.png",
+	"frame": {"x":4,"y":154,"w":220,"h":146},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":220,"h":146},
+	"sourceSize": {"w":220,"h":146}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "radio_5.png",
+	"format": "RGBA8888",
+	"size": {"w":228,"h":304},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7ca393bdb0b5224467c1c62d5f319511:933cd368c9ae3719a59b63cd4439828a:cd102742b3812da3c2ab4c1c42e81d31$"
+}
+}

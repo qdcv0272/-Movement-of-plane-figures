@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": ".png",
+	"frame": {"x":4,"y":4,"w":240,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":80},
+	"sourceSize": {"w":240,"h":80}
+},
+{
+	"filename": "Symbol 99.png",
+	"frame": {"x":4,"y":88,"w":240,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":80},
+	"sourceSize": {"w":240,"h":80}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "btnRetry.png",
+	"format": "RGBA8888",
+	"size": {"w":248,"h":172},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a9cc2662e0405bcb283134a497758cb9:994f702987d56d690a089b5be7fdf7fd:f953c83c30d0bab98f965abd3b434cdf$"
+}
+}

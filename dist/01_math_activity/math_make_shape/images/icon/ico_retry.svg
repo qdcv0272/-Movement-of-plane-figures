@@ -1,0 +1,30 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="17px" height="20px" viewBox="0 0 17 20">
+<defs>
+<g id="Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_1_FILL">
+<path fill="#307ABD" stroke="none" d="
+M 772.8 752.3
+L 778.3 746.8 767.3 746.85 772.8 752.3 Z"/>
+</g>
+
+<path id="Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_0_1_STROKES" stroke="#FFFFFF" stroke-width="3.1" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 14.846186065673805 11.25051498413086
+Q 14.846186065673805 13.890114593505928 12.948973846435592 15.746083068847724 11.093005371093795 17.643295288085938 8.453405761718727 17.643295288085938 5.813806152343659 17.643295288085938 3.916593933105446 15.746083068847724 2.060625457763649 13.890114593505928 2.060625457763649 11.25051498413086 2.060625457763649 8.610915374755791 3.916593933105446 6.713703155517578 5.813806152343659 4.857734680175781 8.453405761718727 4.857734680175781 9.281663915514855 4.857734680175781 10.020668029785156 5.043331527709938"/>
+
+<path id="Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_1_1_STROKES" stroke="#FFFFFF" stroke-width="3.1" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 7.8056663513183935 7.954928588867176
+L 7.771539306640591 1.8127471923828011 11.525514221191372 4.883837890624989 7.8056663513183935 7.954928588867176 Z"/>
+</defs>
+
+<g transform="matrix( 0.79998779296875, 0, 0, 0.79998779296875, 1.75,2.25) ">
+<g transform="matrix( 0.8248748779296875, 0, 0, 0.8248748779296875, -628.35,-521) ">
+<use xlink:href="#Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_0_1_STROKES" transform="matrix( 1.2122955322265625, 0, 0, 1.2122955322265625, 761.75,631.6) "/>
+</g>
+
+<g transform="matrix( 0, -0.558380126953125, 0.6825408935546875, 0, -501.95,436.4) ">
+<use xlink:href="#Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_1_FILL"/>
+
+<use xlink:href="#Duplicate_Items_Folder_Symbol_9_0_Layer0_0_MEMBER_1_1_STROKES" transform="matrix( 0, 1.4651031494140625, -1.7908935546875, 0, 781.5,735.4) "/>
+</g>
+</g>
+</svg>
